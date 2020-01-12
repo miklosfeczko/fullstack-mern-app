@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+@import "./utils/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-style {
+  background: $mainGreyBackground;
+}
+
+.remove-btn {
+  margin-right: .5rem;
+}
+
+.add-btn {
+  background-image: $mainGreyBackground;
+	border-radius: 40px;
+  box-sizing: border-box;
+	color: #343a40;
+	display: block;
+  font-size: 1rem;
+	height: 40px;
+	margin: 0 auto;
+	padding: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 120px;
+  border: none;
+}
+
+.add-btn span {
+  align-items: center;
+	background: #e7e8e9;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+  width: 100%;
+  transition: background .1s ease;
+}
+
+.add-btn:hover span {
+  color: white;
+  background-color: transparent;
+}

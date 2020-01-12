@@ -15,26 +15,26 @@ class ShoppingList extends Component {
 
   render() {
     const {items} = this.state
-    return(
+    return (
       <Container>
         <Button
-          color="dark"
-          style={{margin: '2rem 0'}}
+          className="add-btn"
+          style={{ margin: "2rem 0" }}
           onClick={() => {
-            const name = prompt('Enter item')
-            if(name) {
+            const name = prompt("Enter item");
+            if (name) {
               this.setState(state => ({
-                items: [...state.items, { id: uuid(), name}]
-              }))
+                items: [...state.items, { id: uuid(), name }]
+              }));
             }
-          }} 
+          }}
         >
-          Add Item
+          <span>Add Item</span>
         </Button>
 
         <ListGroup>
           <TransitionGroup className="shopping-list">
-            {items.map(( {id, name }) => (
+            {items.map(({ id, name }) => (
               <CSSTransition key={id} timeout={500} classNames="fade">
                 <ListGroupItem>
                   <Button
@@ -44,7 +44,7 @@ class ShoppingList extends Component {
                     onClick={() => {
                       this.setState(state => ({
                         items: state.items.filter(item => item.id !== id)
-                      }))
+                      }));
                     }}
                   >
                     &times;
@@ -56,7 +56,7 @@ class ShoppingList extends Component {
           </TransitionGroup>
         </ListGroup>
       </Container>
-    )
+    );
   }
 }
 
