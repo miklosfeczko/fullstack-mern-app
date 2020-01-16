@@ -13,4 +13,5 @@ const ItemSchema = new Schema({
   }
 })
 
+// we define our database's structure (schema) and name here
 module.exports = Item = mongoose.model('item', ItemSchema)
